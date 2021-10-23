@@ -1,10 +1,10 @@
 var storedName = localStorage.getItem("storedName");
+let labelSN = document.querySelector('.savedName');
 
 function saveName() {
     var Name = document.getElementById("name").value;
     localStorage.setItem("storedName", Name);
     document.getElementById("savedName").textContent = `Welcome ${Name}`;
-    // window.location.reload();
     document.querySelector('.changeBtn').innerHTML = 'Change Name';
 }
 
@@ -15,6 +15,7 @@ function get() {
     }
     else {
         document.getElementById("getName").textContent = `Welcome ${storedName}. What is Your Plan Today?`;
+        labelSN.style.display = 'none';
         document.querySelector('.changeBtn').innerHTML = 'Change Name';
     }
 }
@@ -22,5 +23,6 @@ function get() {
 function deleteName() {
     localStorage.clear();
     document.getElementById("getName").innerHTML = '';
+    labelSN.style.display = 'initial';
     document.querySelector('.changeBtn').innerHTML = 'Input Name';
 }
