@@ -1,0 +1,52 @@
+:root {
+    --whiteBG: #fff;
+    --blackBG: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url('https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    display: grid;
+    place-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 50vmin;
+}
+
+.btnConts {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30vmin;
+}
+
+button {
+    cursor: pointer;
+    font-size: 2vmin;
+    outline: auto;
+    outline-style: round;
+    outline-color: var(--whiteBG);
+    border-radius: 5vmin;
+    padding: 1rem 2rem;
+    margin: 1vmin;
+    background: transparent;
+    color: var(--whiteBG);
+    font-weight: 700;
+    opacity: 2;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: rgb(211, 211, 211);
+}
