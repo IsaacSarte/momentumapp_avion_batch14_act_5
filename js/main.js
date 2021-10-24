@@ -13,6 +13,7 @@ function saveName() {
     localStorage.setItem("storedName", Name);
     document.getElementById("savedName").textContent = `Welcome ${Name}`;
     document.querySelector('.changeBtn').innerHTML = 'Change Name';
+    window.location.reload();
 }
 
 function get() {
@@ -36,6 +37,7 @@ function saveGoal() {
     var Goal = document.getElementById("mainGoal").value;
     localStorage.setItem("storedGoal", Goal);
     console.log(Goal);
+    window.location.reload();
 }
 
 function getGoal() {
@@ -57,6 +59,7 @@ function deleteName() {
     localStorage.clear();
     document.getElementById("getName").innerHTML = '';
     labelSN.style.display = 'initial';
+    goalBtn.style.display = 'none';
     document.querySelector('.changeBtn').innerHTML = 'Input Name';
 }
 
