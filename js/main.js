@@ -50,16 +50,21 @@ function get() {
 
 // Goal Functions
 function saveGoal() {
-    var Goal = document.getElementById("mainGoal").value;
-    localStorage.setItem("storedGoal", Goal);
-    console.log(Goal);
-    window.location.reload();
+    let Goal = document.forms["nForm"]["mGoal"].value;
+    if (Goal == null || Goal == "") {
+        console.log('Type your goal');
+    }
+    else {
+        localStorage.setItem("storedGoal", Goal);
+        console.log(Goal);
+        window.location.reload();
+    }
 }
 
 function getGoal() {
     localStorage.getItem("storedGoal");
     if (storedGoal == null) {
-        alert('No Main Goal for Today👌');
+        console.log('No Goal');
     }
     else {
         span.style.display = 'initial';

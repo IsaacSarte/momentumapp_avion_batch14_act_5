@@ -36,7 +36,9 @@
                 <label id="savedName" class="savedName">What is Your Name?</label>
                 <label id="getName"></label>
                 <input type="text" id="name" class="nameInput"/>
-                <input type="text" id="mainGoal" class="goalInput" required/>
+                <form name="nForm" id="nForm">
+                    <input type="text" name="mGoal" id="mGoal" class="goalInput" required/>
+                </form>
                 <span id="goal" class="goal" onclick="delGoal()"></span>
                 <p class="finished">✔️Done?</p>
             </div>

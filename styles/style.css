@@ -66,7 +66,7 @@ main {
     border-bottom: 2px solid rgba(63, 59, 117, 0.52);
 }
 
-    .input-name #mainGoal {
+    .input-name #mGoal {
         display: none;
     }
 
@@ -79,9 +79,6 @@ main {
     width: 40%;
     height: 100%;
     margin: 0 auto;
-    outline: auto;
-    outline-style: round;
-    outline-color: transparent;
     border-radius: 30px;
     text-align: center;
     transition: 0.2s;
@@ -130,7 +127,7 @@ main {
 }
 
 .btnGoal button:hover {
-    color: #d6d5d5;
+    color: #e6e4e4;
 }
 
 .btnConts {
@@ -175,7 +172,7 @@ button:hover {
     border: none;
     width: 100%;
     font-size: 4vmin;
-    color: var(--whiteBG);
+    color: var(--blackBG);
     border-bottom: 2px solid var(--whiteBG);
     display: none;
 }
@@ -188,7 +185,8 @@ button:hover {
     cursor: pointer;
     font-size: 3vmin;
     font-style: italic;
-    color: var(--whiteBG);
+    color: var(--blackBG);
+    font-weight: bolder;
     transition: 0.2s ease-in-out;
     display: none;
 }
