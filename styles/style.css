@@ -108,6 +108,8 @@ main {
 
 .changeName {
     display: none;
+    margin-top: 0vmin;
+    margin-left: -2vmin;
 }
 
 .btnGoal {
@@ -134,7 +136,8 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 10vmin;
+    padding-top: 5vmin;
+    margin-left: 5vmin;
 }
 
 button {
@@ -142,12 +145,11 @@ button {
     font-size: 2vmin;
     outline: auto;
     outline-style: round;
-    outline-color: var(--whiteBG);
     border-radius: 5vmin;
     padding: 1rem 2rem;
     margin: 1vmin;
-    background: transparent;
-    color: var(--whiteBG);
+    background: var(--whiteBG);
+    color: var(--blackBG);
     font-weight: 700;
     opacity: 2;
     transition: 0.2s;
@@ -156,6 +158,55 @@ button {
 button:hover {
     color: rgb(42, 42, 42);
     transform: scale(1.05 , 1.05);
+}
+
+.quoteConts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quoteConts input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-size: 4vmin;
+    color: var(--whiteBG);
+    border-bottom: 2px solid var(--whiteBG);
+    display: none;
+}
+
+.quoteConts input:focus {
+    outline: none;
+}
+
+.quoteConts span {
+    cursor: pointer;
+    font-size: 3vmin;
+    font-style: italic;
+    color: var(--whiteBG);
+    transition: 0.2s ease-in-out;
+    display: none;
+}
+
+.quoteConts span:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.quoteConts .getQuote {
+    position: relative;
+    display: none;
+    font-style: italic;
+}
+
+.quoteConts span::before {
+    content: '"';
+}
+
+.quoteConts span::after {
+    content: '"';
 }
 
 /* Phone Queries */
@@ -168,6 +219,7 @@ button:hover {
                         }
                         .btnConts {
                             padding-top: 20vmin;
+                            margin-left: 0vmin;
                         }
                         button {
                             font-size: 3vmin;
@@ -179,5 +231,11 @@ button:hover {
                             font-size: 7vw;
                             padding-top: 5vw;
                             outline: none;
+                        }
+                        .quoteConts span {
+                            margin-top: 5vmin;
+                        }
+                        .quoteConts .getQuote {
+                            margin-top: 5vmin;
                         }
                     }

@@ -36,7 +36,7 @@
                 <label id="savedName" class="savedName">What is Your Name?</label>
                 <label id="getName"></label>
                 <input type="text" id="name" class="nameInput"/>
-                <input type="text" id="mainGoal" class="goalInput"/>
+                <input type="text" id="mainGoal" class="goalInput" required/>
                 <span id="goal" class="goal" onclick="delGoal()"></span>
                 <p class="finished">✔️Done?</p>
             </div>
@@ -52,6 +52,14 @@
             <button onclick="saveName()" class="changeBtn">Input Name</button>
             <button onclick="logOut()" class="removeBtn">Stay Logged Out</button>
             <button onclick="changeName()" class="changeName">Change Name</button>
+        </div>
+
+        <!-- Quote -->
+        <div class="quoteConts">
+            <form name="Form" id="Form">
+                <input type="text" name="quoteIpt" id="quoteIpt" class="quoteInput" required>
+            </form>
+            <span id="quote" class="quote" onclick="setQuote()">Add Quote</span>
         </div>
     </main>
 

@@ -1,13 +1,23 @@
 // Global Variables
+// Name Variables
 var storedName = localStorage.getItem("storedName");
 let labelSN = document.querySelector('.savedName');
 let nameInput = document.querySelector('.nameInput');
 
+// Goal Variables
 var storedGoal = localStorage.getItem("storedGoal");
 let goalInput = document.querySelector('.goalInput');
 let goalBtn = document.querySelector('.changeGoal');
 let span = document.querySelector('.goal');
 
+// Quote Variables
+var storedQuote = localStorage.getItem("storedQuote");
+let spanQuote = document.querySelector('.quote');
+let spanTxt = document.querySelector('.quoteInput');
+let spanChange = document.querySelector('.removeQuote');
+
+
+// Main Functions 
 function saveName() {
     var Name = document.getElementById("name").value;
     localStorage.setItem("storedName", Name);
@@ -30,11 +40,15 @@ function get() {
         document.querySelector('.changeBtn').style.display = 'none';
         document.querySelector('.removeBtn').style.display = 'none';
         document.querySelector('.changeName').style.display = 'initial';
+        spanQuote.style.display = 'initial';
 
         getGoal();
+
+        getQuote();
     }
 }
 
+// Goal Functions
 function saveGoal() {
     var Goal = document.getElementById("mainGoal").value;
     localStorage.setItem("storedGoal", Goal);
@@ -82,4 +96,22 @@ function logOut() {
 
 function changeName() {
     deleteName();
+}
+
+function setQuote() {
+    spanTxt.style.display = 'initial';
+    let Quote = document.forms["Form"]["quoteIpt"].value;
+    if (Quote == null || Quote == "") {
+        console.log('Type your quote below');
+    }
+    else {
+        localStorage.setItem("storedQuote", Quote);
+        console.log(Quote);
+        window.location.reload();
+    }
+}
+
+function getQuote() {
+    localStorage.getItem("storedQuote");
+    spanQuote.textContent = `${storedQuote}` ;
 }
