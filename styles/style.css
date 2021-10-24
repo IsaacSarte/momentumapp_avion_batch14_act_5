@@ -43,6 +43,9 @@ main {
     font-size: 9vmin;
     font-weight: 700;
 }
+    .input-name #getName {
+        font-size: 5vmin;
+    }
 
 .container .input-name input {
     position: relative;

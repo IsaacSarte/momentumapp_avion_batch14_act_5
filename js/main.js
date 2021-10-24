@@ -14,7 +14,7 @@ function get() {
         document.getElementById("getName").innerHTML = '';
     }
     else {
-        document.getElementById("getName").textContent = `Welcome ${storedName}. What is Your Plan Today?`;
+        document.getElementById("getName").textContent = `Welcome ${storedName}. What is Your Goal Today?`;
         labelSN.style.display = 'none';
         document.querySelector('.changeBtn').innerHTML = 'Change Name';
     }
