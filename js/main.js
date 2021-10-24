@@ -58,7 +58,7 @@ function saveGoal() {
 
 function getGoal() {
     localStorage.getItem("storedGoal");
-    if (storedGoal === null) {
+    if (storedGoal == null) {
         alert('No Main Goal for Today👌');
     }
     else {
@@ -102,6 +102,7 @@ function setQuote() {
     spanTxt.style.display = 'initial';
     let Quote = document.forms["Form"]["quoteIpt"].value;
     if (Quote == null || Quote == "") {
+        spanQuote.textContent = `Add Quote`;
         console.log('Type your quote below');
     }
     else {
@@ -113,5 +114,9 @@ function setQuote() {
 
 function getQuote() {
     localStorage.getItem("storedQuote");
-    spanQuote.textContent = `${storedQuote}` ;
+    spanQuote.textContent = `${storedQuote}`;
+    console.log(spanQuote);
+    if (spanQuote.textContent == "null") {
+        spanQuote.textContent = `Add Quote`;
+    }
 }
