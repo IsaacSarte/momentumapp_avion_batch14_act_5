@@ -22,12 +22,14 @@ function get() {
         document.getElementById("getName").innerHTML = '';
     }
     else {
-        document.getElementById("getName").textContent = `Welcome ${storedName}. What is Your Goal Today?`;
+        document.getElementById("getName").textContent = `Welcome ${storedName}! What is Your Goal Today?`;
         labelSN.style.display = 'none';
         nameInput.style.display = 'none';
         goalInput.style.display = 'initial';
         goalBtn.style.display = 'initial';
-        document.querySelector('.changeBtn').innerHTML = 'Change Name';
+        document.querySelector('.changeBtn').style.display = 'none';
+        document.querySelector('.removeBtn').style.display = 'none';
+        document.querySelector('.changeName').style.display = 'initial';
 
         getGoal();
     }
@@ -56,11 +58,12 @@ function getGoal() {
 }
 
 function deleteName() {
-    localStorage.clear();
+    window.localStorage.removeItem("storedName");
     document.getElementById("getName").innerHTML = '';
     labelSN.style.display = 'initial';
     goalBtn.style.display = 'none';
     document.querySelector('.changeBtn').innerHTML = 'Input Name';
+    window.location.reload();
 }
 
 function delGoal() {
@@ -71,4 +74,12 @@ function delGoal() {
 function start() {
     get();
     initClock();
+}
+
+function logOut() {
+    saveName();
+}
+
+function changeName() {
+    deleteName();
 }
