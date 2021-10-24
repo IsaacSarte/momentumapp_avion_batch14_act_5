@@ -1,7 +1,7 @@
 let images = [
     "url('https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
-    "url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
-    "url('https://images.pexels.com/photos/733854/pexels-photo-733854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
+    "url('https://images.pexels.com/photos/967016/pexels-photo-967016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
+    "url('https://images.pexels.com/photos/97987/pexels-photo-97987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
     "url('https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
     "url('https://images.pexels.com/photos/3184464/pexels-photo-3184464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
 ]

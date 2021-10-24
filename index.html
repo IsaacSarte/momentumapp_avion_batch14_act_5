@@ -35,15 +35,22 @@
             <div class="input-name">
                 <label id="savedName" class="savedName">What is Your Name?</label>
                 <label id="getName"></label>
-                <input type="text" id="name" />
-                <div class="underline"></div>
+                <input type="text" id="name" class="nameInput"/>
+                <input type="text" id="mainGoal" class="goalInput"/>
+                <span id="goal" class="goal" onclick="delGoal()"></span>
+                <p class="finished">✔️Done?</p>
             </div>
+        </div>
+
+        <!-- Buttons for Goal -->
+        <div class="btnGoal">
+            <button onclick="saveGoal()" class="changeGoal">💻Place as My Main Goal</button>
         </div>
 
         <!-- Buttons for Name -->
         <div class="btnConts">
             <button onclick="saveName()" class="changeBtn">Input Name</button>
-            <button onclick="deleteName()">Remove Name</button>
+            <button onclick="deleteName()" class="removeBtn">Remove Name</button>
         </div>
     </main>
 

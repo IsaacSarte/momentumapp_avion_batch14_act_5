@@ -63,7 +63,66 @@ main {
 .container .input-name input:focus {
     border: none;
     outline: none;
-    border-bottom: 2px solid rgba(171, 171, 251, 0.52);
+    border-bottom: 2px solid rgba(63, 59, 117, 0.52);
+}
+
+    .input-name #mainGoal {
+        display: none;
+    }
+
+.container .input-name span {
+    color: var(--whiteBG);
+    font-size: 3vw;
+    font-weight: 900;
+    display: none;
+    background: transparent;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    outline: auto;
+    outline-style: round;
+    outline-color: transparent;
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.finished {
+    display: none;
+}
+
+.container .input-name span:hover {
+    cursor: pointer;
+    color: rgb(23, 226, 114);
+    width: 30%;
+}
+
+.container .input-name span:hover + .finished{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -3%;
+    padding-right: 22.5%;
+    color: var(--whiteBG);
+    font-size: 2.75vmin;
+}
+
+.btnGoal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btnGoal button {
+    outline: none;
+    outline-style: none;
+    border: none;
+    font-size: 2vw;
+    display: none;
+}
+
+.btnGoal button:hover {
+    color: #d6d5d5;
 }
 
 .btnConts {
@@ -91,6 +150,6 @@ button {
 }
 
 button:hover {
-    color: rgb(211, 211, 211);
+    color: rgb(42, 42, 42);
     transform: scale(1.05 , 1.05);
 }
