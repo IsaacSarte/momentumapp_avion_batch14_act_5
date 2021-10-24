@@ -26,3 +26,8 @@ function deleteName() {
     labelSN.style.display = 'initial';
     document.querySelector('.changeBtn').innerHTML = 'Input Name';
 }
+
+function start() {
+    get();
+    initClock();
+}

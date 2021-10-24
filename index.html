@@ -7,11 +7,29 @@
     <title>Momentum App [Avion]</title>
 
     <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/time.css" type="text/css" />
 
 </head>
-<body onload="get()">
+<body onload="start()">
+    <!-- onload="start()" -->
 
     <main>
+        <!-- Time Container -->
+        <div class="datetime">
+            <div class="date">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+            </div>
+        </div>
+
         <!-- Input Name -->
         <div class="container">
             <div class="input-name">
@@ -32,6 +50,17 @@
 
     <script src="js/main.js"></script>
     <script src="js/bgImages.js"></script>
+    <script src="js/time.js"></script>
+    <!-- Ask for Location -->
+    <script>
+        const successP = (position) => {
+            console.log(position);
+        };
+        const errorP = (error) => {
+            console.log(error);
+        };
+        navigator.geolocation.getCurrentPosition(successP, errorP);
+    </script>
 
 </body>
 </html>
