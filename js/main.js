@@ -22,7 +22,7 @@ let toDoTxt = document.querySelector('.toDoTxt');
 let toDoCtr = document.querySelector('.toDoCtr');
 
 // Main Functions 
-function saveName() {
+let saveName = () => {
     var Name = document.getElementById("name").value;
     localStorage.setItem("storedName", Name);
     document.getElementById("savedName").textContent = `Welcome ${Name}`;
@@ -30,7 +30,7 @@ function saveName() {
     window.location.reload();
 }
 
-function get() {
+let get = () => {
     localStorage.getItem("storedName");
     if (storedName === null) {
         document.getElementById("getName").innerHTML = '';
@@ -46,42 +46,36 @@ function get() {
         document.querySelector('.changeName').style.display = 'initial';
         spanQuote.style.display = 'initial';
         toDoTxt.style.display = 'initial';
+        toDoConts.style.display = 'initial';
+        document.querySelector('.todoList').style.display = 'none';
+        document.querySelector('.clearTask').style.display = 'none';
 
         getGoal();
 
-        getQuote();
+        getQuote(); 
     }
 }
 
 // Goal Functions
-function saveGoal() {
+let saveGoal = () => {
     let Goal = document.forms["nForm"]["mGoal"].value;
-    if (Goal == null || Goal == "") {
-        console.log('Type your goal');
-    }
-    else {
-        localStorage.setItem("storedGoal", Goal);
-        console.log(Goal);
-        window.location.reload();
-    }
+    (Goal == null || Goal == "") ? `` : (localStorage.setItem("storedGoal", Goal), window.location.reload());
 }
 
-function getGoal() {
+let getGoal = () => {
     localStorage.getItem("storedGoal");
-    if (storedGoal == null) {
-        console.log('No Goal');
-    }
-    else {
-        span.style.display = 'initial';
-        document.getElementById("goal").textContent = `↪ ${storedGoal}`;
-        goalInput.style.display = 'none';
-        goalBtn.style.display = 'none';
-        document.querySelector('.changeBtn').style.display = 'none';
-        document.querySelector('.removeBtn').style.display = 'none';
-    }
+    storedGoal == null ? `` : 
+        (
+            span.style.display = 'initial',
+            document.getElementById("goal").textContent = `↪ ${storedGoal}`,
+            goalInput.style.display = 'none',
+            goalBtn.style.display = 'none',
+            document.querySelector('.changeBtn').style.display = 'none',
+            document.querySelector('.removeBtn').style.display = 'none'
+        );
 }
 
-function deleteName() {
+let deleteName = () => {
     window.localStorage.removeItem("storedName");
     document.getElementById("getName").innerHTML = '';
     labelSN.style.display = 'initial';
@@ -90,45 +84,37 @@ function deleteName() {
     window.location.reload();
 }
 
-function delGoal() {
+let delGoal = () => {
     window.localStorage.removeItem("storedGoal");
     window.location.reload();
 }
 
-function start() {
+let start = () => {
     get();
     initClock();
-    getToDo();
 }
 
-function logOut() {
+let logOut = () => {
     saveName();
 }
 
-function changeName() {
+let changeName = () => {
     deleteName();
 }
 
 // Quote Functions
-function setQuote() {
+
+    // add new quote
+let setQuote = () => {
     spanTxt.style.display = 'initial';
     let Quote = document.forms["Form"]["quoteIpt"].value;
-    if (Quote == null || Quote == "") {
-        spanQuote.textContent = `Add Quote`;
-        console.log('Type your quote below');
-    }
-    else {
-        localStorage.setItem("storedQuote", Quote);
-        console.log(Quote);
-        window.location.reload();
-    }
+    (Quote == null || Quote == "") ? `Add Quote` : (localStorage.setItem("storedQuote", Quote), window.location.reload());
 }
 
-function getQuote() {
+    // get inputted quote
+let getQuote = () => {
     localStorage.getItem("storedQuote");
     spanQuote.textContent = `${storedQuote}`;
     console.log(spanQuote);
-    if (spanQuote.textContent == "null") {
-        spanQuote.textContent = `Add Quote`;
-    }
+    spanQuote.textContent == "null" ? `Add Quote` : ``;
 }

@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles/time.css" type="text/css" />
     <link rel="stylesheet" href="styles/todo.css" type="text/css" />
 
+    <!--Font Awesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body onload="start()">
     <!-- onload="start()" -->
@@ -69,10 +72,16 @@
         <div class="todoConts">
             <div class="toDoCtr">
                 <button id="hidetoDo" onclick="closeToDo()">▼</button>
-                <input type="text" id="toDoField">
-                <button id="toDoBtn">+</button>
+                <input type="text" id="toDoField" class="inputVal" value="">
+                <button id="toDoBtn" class="tdBtn">+</button>
             </div>
-            <span class="toDoTxt" onclick="openToDo()">To Do</span>
+            <div class="toDoLists">
+
+            </div>
+            <div class="menuToDo">
+                <span class="toDoTxt" onclick="openToDo()">To Do</span>
+                <button class="clearTask" onclick="clearTask()"><i class="fas fa-trash-alt"></i></button>
+            </div>
         </div>
     </main>
 
