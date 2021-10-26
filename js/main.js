@@ -47,8 +47,12 @@ let get = () => {
         spanQuote.style.display = 'initial';
         toDoTxt.style.display = 'initial';
         toDoConts.style.display = 'initial';
-        document.querySelector('.todoList').style.display = 'none';
-        document.querySelector('.clearTask').style.display = 'none';
+        let elems = document.getElementsByClassName('todoList');
+        for (let i = 0; i < elems.length; i++) {
+            elems[i].style.display = 'none';
+        }
+        // document.querySelector('.todoList').style.display = 'none';
+        // document.querySelector('.clearTask').style.display = 'none';
 
         getGoal();
 
