@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="styles/style.css" type="text/css" />
     <link rel="stylesheet" href="styles/time.css" type="text/css" />
+    <link rel="stylesheet" href="styles/todo.css" type="text/css" />
 
 </head>
 <body onload="start()">
@@ -63,10 +64,21 @@
             </form>
             <span id="quote" class="quote" onclick="setQuote()">Add Quote</span>
         </div>
+
+        <!-- To Do List -->
+        <div class="todoConts">
+            <div class="toDoCtr">
+                <button id="hidetoDo" onclick="closeToDo()">▼</button>
+                <input type="text" id="toDoField">
+                <button id="toDoBtn">+</button>
+            </div>
+            <span class="toDoTxt" onclick="openToDo()">To Do</span>
+        </div>
     </main>
 
 
     <script src="js/main.js"></script>
+    <script src="js/todo.js"></script>
     <script src="js/bgImages.js"></script>
     <script src="js/time.js"></script>
     <!-- Ask for Location -->

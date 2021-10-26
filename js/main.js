@@ -16,6 +16,10 @@ let spanQuote = document.querySelector('.quote');
 let spanTxt = document.querySelector('.quoteInput');
 let spanChange = document.querySelector('.removeQuote');
 
+// To Do Variables
+let toDoConts = document.querySelector('.todoConts');
+let toDoTxt = document.querySelector('.toDoTxt');
+let toDoCtr = document.querySelector('.toDoCtr');
 
 // Main Functions 
 function saveName() {
@@ -41,6 +45,7 @@ function get() {
         document.querySelector('.removeBtn').style.display = 'none';
         document.querySelector('.changeName').style.display = 'initial';
         spanQuote.style.display = 'initial';
+        toDoTxt.style.display = 'initial';
 
         getGoal();
 
@@ -93,6 +98,7 @@ function delGoal() {
 function start() {
     get();
     initClock();
+    getToDo();
 }
 
 function logOut() {
@@ -103,6 +109,7 @@ function changeName() {
     deleteName();
 }
 
+// Quote Functions
 function setQuote() {
     spanTxt.style.display = 'initial';
     let Quote = document.forms["Form"]["quoteIpt"].value;

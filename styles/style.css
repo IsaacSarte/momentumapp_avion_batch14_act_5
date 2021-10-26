@@ -14,7 +14,7 @@
 
 body {
     min-height: 100vh;
-    background: url('https://images.pexels.com/photos/967016/pexels-photo-967016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background: url('https://images.unsplash.com/photo-1631477076110-2b8c1fe0f3cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -172,7 +172,7 @@ button:hover {
     border: none;
     width: 100%;
     font-size: 4vmin;
-    color: var(--blackBG);
+    color: var(--whiteBG);
     border-bottom: 2px solid var(--whiteBG);
     display: none;
 }
@@ -185,7 +185,7 @@ button:hover {
     cursor: pointer;
     font-size: 3vmin;
     font-style: italic;
-    color: var(--blackBG);
+    color: var(--whiteBG);
     font-weight: bolder;
     transition: 0.2s ease-in-out;
     display: none;
