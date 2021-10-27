@@ -1,4 +1,4 @@
-function updClock() {
+let updClock = () => {
     let now = new Date();
     let dname = now.getDay(),
         mo = now.getMonth(),
@@ -9,13 +9,9 @@ function updClock() {
         sec = now.getSeconds(),
         pe = "AM";
 
-        if(hou == 0) {
-            hou = 12;
-        }
-        if(hou > 12) {
-            hou = hou - 12;
-            pe = "PM";
-        }
+        hou == 0 ? hou = 12 : console.log('Not yet 0');
+
+        hou > 12 ? hou = hou -12 : pe = 'PM';
 
         Number.prototype.pad = function(digits) {
             for(var n = this.toString(); n.length < digits; n = 0 + n);
@@ -31,7 +27,7 @@ function updClock() {
         document.getElementById(ids[i]).firstChild.nodeValue = values[i];
 }
 
-function initClock() {
+let initClock = () => {
     updClock();
     window.setInterval("updClock()" , 1);
 }
