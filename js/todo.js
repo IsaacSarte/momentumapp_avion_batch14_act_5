@@ -21,6 +21,14 @@ let closeToDo = () => {
         elems[i].style.display = 'none';
     }
     document.querySelector('.clearTask').style.display = 'none';
+    // Media Query Styling for Phone
+    let toDoQuery = (toDoPhone) => {
+        toDoPhone.matches ? toDoConts.style.top = '41vw' : toDoConts.style.top = '21vw';
+    }
+    let toDoPhone = window.matchMedia("(max-width: 500px)");
+    toDoQuery(toDoPhone);
+    toDoPhone.addListener(toDoQuery);
+
 }
 
 // Main To Do List Function
