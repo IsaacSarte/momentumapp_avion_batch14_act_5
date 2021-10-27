@@ -10,7 +10,7 @@ let body = document.querySelector('body')
 
 setInterval(timerFC = () => {
     let bg = images[Math.floor(Math.random() * images.length)]
-    console.log(bg)
+    console.log(`Photo Generated URL: ${bg}`);
 
     body.style.background = bg
     body.style.backgroundRepeat = "no-repeat"

@@ -31,7 +31,19 @@ let saveName = () => {
     window.location.reload();
 }
 
-let get = () => {
+    nameInput.addEventListener('click', e => {
+        console.log(`Class Named Clicked: ${e.target.className} || ID Named: ${e.target.id} || with Element: ${e.target.tagName}`);
+    })
+    
+    document.querySelector('.changeBtn').addEventListener('click', e => {
+        console.log(`Class Named Clicked: ${e.target.className} || ID Named: ${e.target.id} || with Element: ${e.target.tagName}`);
+    })
+
+    document.querySelector('.removeBtn').addEventListener('click', e => {
+        console.log(`Class Named Clicked: ${e.target.className} || ID Named: ${e.target.id} || with Element: ${e.target.tagName}`);
+    })
+
+let getName = () => {
     localStorage.getItem("storedName");
     if (storedName === null) {
         document.getElementById("getName").innerHTML = '';
@@ -55,6 +67,19 @@ let get = () => {
         for (let i = 0; i < mainQuote.length; i++) {
             mainQuote[i].style.display = 'none';
         }
+
+        goalInput.addEventListener('click', e => {
+            console.log(`Class Named Clicked: ${e.target.className} || ID Named: ${e.target.id} || with Element: ${e.target.tagName}`);
+        })
+            
+        goalBtn.addEventListener('click', e => {
+            console.log(`Class Named Clicked: ${e.target.className} || ID Named: ${e.target.id} || with Element: ${e.target.tagName}`);
+        })
+
+        toDoConts.addEventListener('click', e => {
+            console.log(`Class Named Clicked: ${e.target.className} || ID Named: ${e.target.id} || with Element: ${e.target.tagName}`);
+        })
+
         getGoal();
 
         getQuote(); 
@@ -95,7 +120,7 @@ let delGoal = () => {
 }
 
 let start = () => {
-    get();
+    getName();
     initClock();
 }
 

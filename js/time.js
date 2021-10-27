@@ -9,7 +9,7 @@ let updClock = () => {
         sec = now.getSeconds(),
         pe = "AM";
 
-        hou == 0 ? hou = 12 : console.log('Not yet 0');
+        hou == 0 ? hou = 12 : ``;
 
         hou > 12 ? hou = hou -12 : pe = 'PM';
 
