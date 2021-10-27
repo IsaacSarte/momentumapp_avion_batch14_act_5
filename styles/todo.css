@@ -87,3 +87,22 @@
     border: none;
     outline: none;
 }
+
+                    @media screen and (min-width: 320px) and (max-width: 500px) {
+                        .todoConts {
+                            margin-top: 145vw;
+                            transform: translateX(24vw);
+                            border-radius: 8px;
+                            width: 50%;
+                        }
+                        .toDoCtr {
+                            width: 100%;
+                        }
+                        .menuToDo span {
+                            font-size: 5vw;
+                        }
+                        .clearTask i {
+                            position: absolute;
+                            margin-top: -0.8rem;
+                        }
+                    }

@@ -1,7 +1,9 @@
-const inputVal = document.getElementsByClassName('inputVal')[0];
-const addBtn = document.getElementsByClassName('tdBtn')[0];
+// Const Values from the HTML Objects
+const inputVal = document.querySelector(".toDoCtr input");
+const addBtn = document.querySelector(".toDoCtr .tdBtn");
+const todoList = document.querySelector(".toDoLists");
 
-function openToDo() {
+let openToDo = () => {
     toDoConts.style.top = '18.1vw';
     toDoCtr.style.display = 'initial';
     let elems = document.getElementsByClassName('todoList');
@@ -11,7 +13,7 @@ function openToDo() {
     document.querySelector('.clearTask').style.display = 'initial';
 }
 
-function closeToDo() {
+let closeToDo = () => {
     toDoCtr.style.display = 'none';
     toDoConts.style.top = '21vw';
     let elems = document.getElementsByClassName('todoList');
@@ -22,37 +24,22 @@ function closeToDo() {
 }
 
 // Main To Do List Function
-addBtn.addEventListener('click', function() {
-    if(inputVal.value.trim() != 0) {
-        // Local Storage
-        let storedToDo = JSON.parse(localStorage.getItem('toDo'))
-        if (storedToDo === null) {
-            taskList = []
-        }
-        else {
-            taskList = storedToDo;
-        }
-        taskList.push(inputVal.value)
-        localStorage.setItem('toDo', JSON.stringify(taskList));
-    }
-    showToDo()
-})
+addBtn.onclick = () => {
+    let enteredToDo = inputVal.value;
+    let storedToDo = localStorage.getItem('toDo');
+    storedToDo == null ? (listTask = []) : (listTask = JSON.parse(storedToDo));
+    listTask.push(enteredToDo);
+    localStorage.setItem('toDo', JSON.stringify(listTask));
+    showToDo();
+}
 
 // Showing To Do List Function
-function showToDo() {
-    let storedToDo = JSON.parse(localStorage.getItem('toDo'))
-    if (storedToDo === null) {
-        taskList = []
-    }
-    else {
-        taskList = storedToDo;
-    }
-    let html = '';
-    let itemShow = document.querySelector('.toDoLists');
-    taskList.forEach((data, index ) => {
-        
-    
-        html += `
+let showToDo = () => {
+    let storedToDo = localStorage.getItem('toDo');
+    storedToDo == null ? (listTask = []) : (listTask = JSON.parse(storedToDo));
+    let newList = ''; // Creating new List
+    listTask.forEach((data, index ) => { 
+        newList += `
         <div class="todoList">
         <p class="pText">• ${data}</p>
         <button class="deleteTask" onClick="deleteItem(${index})">x</button>
@@ -60,19 +47,23 @@ function showToDo() {
         `
     })
 
-    itemShow.innerHTML = html;
-}
-showToDo()
-
-function deleteItem(index){
-    let storedToDo = JSON.parse( localStorage.getItem('toDo'))
-    taskList.splice(index, 1)
-    localStorage.setItem('toDo', JSON.stringify(taskList));
-    showToDo()
+    todoList.innerHTML = newList;
+    inputVal.value = "";
 }
 
-function clearTask(){
-    localStorage.removeItem('toDo')
-    window.location.reload();
-    showToDo()
+showToDo();
+
+let deleteItem = (index) => {
+    let storedToDo = localStorage.getItem('toDo');
+    listTask = JSON.parse(storedToDo);
+    listTask.splice(index, 1)
+    localStorage.setItem('toDo', JSON.stringify(listTask));
+    showToDo();
+}
+
+let clearTask = () => {
+    let storedToDo = localStorage.getItem('toDo');
+    storedToDo == null ? (listTask = []) : (listTask = JSON.parse(storedToDo), listTask = []);
+    localStorage.setItem('toDo', JSON.stringify(listTask));
+    showToDo();
 }
