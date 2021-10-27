@@ -15,6 +15,7 @@ var storedQuote = localStorage.getItem("storedQuote");
 let spanQuote = document.querySelector('.quote');
 let spanTxt = document.querySelector('.quoteInput');
 let spanChange = document.querySelector('.removeQuote');
+let mainQuote = document.querySelectorAll('.mainQuote');
 
 // To Do Variables
 let toDoConts = document.querySelector('.todoConts');
@@ -51,9 +52,9 @@ let get = () => {
         for (let i = 0; i < elems.length; i++) {
             elems[i].style.display = 'none';
         }
-        // document.querySelector('.todoList').style.display = 'none';
-        // document.querySelector('.clearTask').style.display = 'none';
-
+        for (let i = 0; i < mainQuote.length; i++) {
+            mainQuote[i].style.display = 'none';
+        }
         getGoal();
 
         getQuote(); 

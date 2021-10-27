@@ -167,6 +167,15 @@ button:hover {
     margin: 0 auto;
 }
 
+.quoteConts #mainQuote {
+    display: initial;
+    cursor: default;
+}
+
+.quoteConts #mainQuote:hover {
+    transform: scale(1.05,1.05);
+}
+
 .quoteConts input {
     background: transparent;
     border: none;
