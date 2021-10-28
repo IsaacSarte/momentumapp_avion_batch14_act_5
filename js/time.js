@@ -11,7 +11,7 @@ let updClock = () => {
 
         hou == 0 ? hou = 12 : ``;
 
-        hou > 12 ? hou = hou -12 : pe = 'PM';
+        hou > 12 ? (hou = hou - 12, pe = "PM") : pe = "AM";
 
         Number.prototype.pad = function(digits) {
             for(var n = this.toString(); n.length < digits; n = 0 + n);
