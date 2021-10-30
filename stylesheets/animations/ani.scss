@@ -1,0 +1,31 @@
+// Slide Animations
+
+.slide-left {
+    animation: slides_left 1s linear forwards;
+}
+
+    @keyframes slides_left {
+        0% {
+            opacity: 0;
+            transform: translateX(-20vh);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0vh);
+        }
+    }
+
+.slide-right {
+    animation: slides_right 1s linear forwards;
+}
+
+    @keyframes slides_right {
+        0% {
+            opacity: 0;
+            transform: translateX(20vh);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0vh);
+        }
+    }

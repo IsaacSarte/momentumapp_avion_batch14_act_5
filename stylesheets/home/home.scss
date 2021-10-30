@@ -1,0 +1,200 @@
+// Sass Import
+@import "../utilities/var";
+@import "../time/time.scss";
+
+@keyframes changeText {
+    0% {
+        content: 'Welcome to Momentum App';
+        transition: content 0.2s ease-in;
+    }
+    50% {
+        content: 'Welcome to Momentum App';
+        opacity: 0.5;
+        transition: content 0.2s ease-in;
+    }
+    100% {
+        content: 'What is Your Name?';
+        opacity: 1;
+        transition: content 0.2s ease-in;
+    }
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    label {
+        font-size: 4vw;
+        color: $whiteFont;
+    }
+    label::before {
+        content: '';
+        animation: changeText 5s linear forwards;
+    }
+    .savedName {
+        font-size: 3vw;
+        color: $whiteFont;
+        animation: fades 2s linear forwards;
+    }
+    input {
+        font-size: 5vw;
+        width: $mainWidth;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: $whiteFont;
+        border-bottom: 2px solid $whiteFont;
+        transition: 0.5s ease-in-out;
+    }
+    input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+    }
+    .btnNames {
+        margin-top: 5vh;
+        button {
+            outline: auto;
+            outline-style: round;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 1rem 2rem;
+            font-size: 1.5vw;
+            transition: 0.2s ease-in;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.focus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+        margin-top: 0vh;
+        font-size: 5vw;
+        width: $mainWidth;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: $whiteFont;
+        border-bottom: 2px solid $whiteFont;
+        transition: 0.5s ease-in-out;
+    }
+    input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+    }
+    .savedFocus {
+        font-size: 3vw;
+        color: $whiteFont;
+        transition: 0.1s linear forwards;
+    }
+    .savedFocus:hover {
+        cursor: pointer;
+        text-decoration: line-through;
+        transform: scale(1.05);
+        color: rgb(0, 100, 0);
+    }
+    button {
+        margin-top: 5vh;
+        outline: auto;
+        outline-style: round;
+        border-radius: 25px;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        font-size: 1.5vw;
+        transition: 0.2s ease-in;
+    }
+    button:hover {
+        transform: scale(1.05);
+    }
+    .changeName {
+        margin-top: 0vh;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: rgb(223, 223, 223);
+    }
+}
+
+.quotesHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: $whiteFont;
+    font-style: italic;
+    span {
+        font-size: 1.5vw;
+        margin-top: 5vh;
+        transition: 0.1s ease-in;
+    }
+    .quoteHome:hover {
+        transform: scale(1.01);
+        cursor: default;
+    }
+    .quoteHome::before {
+        content: '"';
+    }
+    .quoteHome::after {
+        content: '"';
+    }
+    i {
+        cursor: pointer;
+        margin-top: 1vh;
+        font-size: 1.5vw;
+    }
+    i:hover {
+        color: #bfbfbf;
+    }
+    input {
+        font-size: 2vw;
+        width: $mainWidth;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: $whiteFont;
+        border-bottom: 2px solid $whiteFont;
+        transition: 0.5s ease-in-out;
+    }
+    input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+    }
+    .quoteFocus {
+        margin-top: 5vh;
+        cursor: pointer;
+        transition: 0.1s ease-in;
+    }
+    .quoteFocus::before, .quoteFocus::after {
+        content: '"';
+    }
+    .quoteFocus:hover {
+        font-size: 1.55vw;
+        color: #bfbfbf;
+    }
+}
+
+.toDoHome {
+    position: fixed;
+    display: flex;
+    right: 10vw;
+    .toDo {
+        cursor: pointer;
+        color: $whiteFont;
+        font-size: 1.5vw;
+    }
+    .toDo:hover {
+        color: #bfbfbf;
+        text-decoration: underline;
+    }
+}

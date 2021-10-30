@@ -1,0 +1,360 @@
+.datetime {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 10vh;
+  color: #fff;
+  -webkit-animation: fades 1s linear forwards;
+          animation: fades 1s linear forwards;
+}
+
+@-webkit-keyframes fades {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fades {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.date {
+  font-size: 4vw;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 5vw;
+}
+
+.time span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time span:last-child {
+  font-size: 3.75vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Phone Queries */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .date {
+    margin-top: -10vh;
+    font-size: 7.5vw;
+  }
+  .time {
+    font-size: 7vw;
+  }
+}
+
+@-webkit-keyframes changeText {
+  0% {
+    content: 'Welcome to Momentum App';
+    -webkit-transition: content 0.2s ease-in;
+    transition: content 0.2s ease-in;
+  }
+  50% {
+    content: 'Welcome to Momentum App';
+    opacity: 0.5;
+    -webkit-transition: content 0.2s ease-in;
+    transition: content 0.2s ease-in;
+  }
+  100% {
+    content: 'What is Your Name?';
+    opacity: 1;
+    -webkit-transition: content 0.2s ease-in;
+    transition: content 0.2s ease-in;
+  }
+}
+
+@keyframes changeText {
+  0% {
+    content: 'Welcome to Momentum App';
+    -webkit-transition: content 0.2s ease-in;
+    transition: content 0.2s ease-in;
+  }
+  50% {
+    content: 'Welcome to Momentum App';
+    opacity: 0.5;
+    -webkit-transition: content 0.2s ease-in;
+    transition: content 0.2s ease-in;
+  }
+  100% {
+    content: 'What is Your Name?';
+    opacity: 1;
+    -webkit-transition: content 0.2s ease-in;
+    transition: content 0.2s ease-in;
+  }
+}
+
+.names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.names label {
+  font-size: 4vw;
+  color: #fff;
+}
+
+.names label::before {
+  content: '';
+  -webkit-animation: changeText 5s linear forwards;
+          animation: changeText 5s linear forwards;
+}
+
+.names .savedName {
+  font-size: 3vw;
+  color: #fff;
+  -webkit-animation: fades 2s linear forwards;
+          animation: fades 2s linear forwards;
+}
+
+.names input {
+  font-size: 5vw;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.names input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+}
+
+.names .btnNames {
+  margin-top: 5vh;
+}
+
+.names .btnNames button {
+  outline: auto;
+  outline-style: round;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.5vw;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.names .btnNames button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.focus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.focus input {
+  margin-top: 0vh;
+  font-size: 5vw;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.focus input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+}
+
+.focus .savedFocus {
+  font-size: 3vw;
+  color: #fff;
+  -webkit-transition: 0.1s linear forwards;
+  transition: 0.1s linear forwards;
+}
+
+.focus .savedFocus:hover {
+  cursor: pointer;
+  text-decoration: line-through;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: darkgreen;
+}
+
+.focus button {
+  margin-top: 5vh;
+  outline: auto;
+  outline-style: round;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.5vw;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.focus button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.focus .changeName {
+  margin-top: 0vh;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #dfdfdf;
+}
+
+.quotesHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  color: #fff;
+  font-style: italic;
+}
+
+.quotesHome span {
+  font-size: 1.5vw;
+  margin-top: 5vh;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.quotesHome .quoteHome:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  cursor: default;
+}
+
+.quotesHome .quoteHome::before {
+  content: '"';
+}
+
+.quotesHome .quoteHome::after {
+  content: '"';
+}
+
+.quotesHome i {
+  cursor: pointer;
+  margin-top: 1vh;
+  font-size: 1.5vw;
+}
+
+.quotesHome i:hover {
+  color: #bfbfbf;
+}
+
+.quotesHome input {
+  font-size: 2vw;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.quotesHome input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+}
+
+.quotesHome .quoteFocus {
+  margin-top: 5vh;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.quotesHome .quoteFocus::before, .quotesHome .quoteFocus::after {
+  content: '"';
+}
+
+.quotesHome .quoteFocus:hover {
+  font-size: 1.55vw;
+  color: #bfbfbf;
+}
+
+.toDoHome {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 10vw;
+}
+
+.toDoHome .toDo {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+.toDoHome .toDo:hover {
+  color: #bfbfbf;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=home.css.map */

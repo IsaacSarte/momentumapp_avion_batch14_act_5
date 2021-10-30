@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App [Isaac]</title>
+
+    <!--Font Awesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/animations/ani.css" type="text/css" />
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="stylesheets/time/time.css" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/home/home.css" type="text/css" />
+
+    <!-- To Do CSS -->
+    <link rel="stylesheet" href="stylesheets/toDo/todo.css" type="text/css" />
+
+</head>
+<body onload="start()">
+
+    <main class="home" id="home">
+        <!-- Time Container -->
+        <div class="datetime">
+            <div class="date">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+            </div>
+        </div>
+        <!-- Name Container -->
+        <div class="names">
+            <label class="nameLbl" id="nameLbl"></label> <!-- Home Page -->
+            <p class="savedName" id="savedName"></p>
+            <form name="nameForm" id="nameForm" class="nameForm">
+                <input type="text" name="nameTxt" class="nameVal slide-left" id="nameVal" />
+            </form>
+            <div class="btnNames">
+                <button onclick="saveName()" class="saveName" id="saveName">Input Name</button>
+            </div>
+        </div>
+        <!-- Main Focus Container -->
+        <div class="focus">
+            <form name="focusForm" id="focusForm" class="focusForm">
+                <input type="text" name="focusTxt" class="focusVal slide-left removeDP" id="focusVal" />
+                <p onclick="delFocus()" class="savedFocus slide-left" id="savedFocus"></p>
+            </form>
+            <button onclick="saveFocus()" class="saveFocus removeDP" id="saveFocus">💻 Place as My Main Goal</button>
+            <button onclick="changeName()" class="changeName removeDP" id="changeName">Change Name</button>
+        </div>
+        <!-- Quote Container -->
+        <div class="quotesHome">
+            <span class="quoteHome slide-right" id="quoteHome">Only I can change my life. No one can do it for me.</span>
+            <form name="quoteForm" class="quoteForm" id="quoteForm">
+                <input type="text" name="quoteTxt" class="quoteVal removeDP" id="quoteVal" />
+            </form>
+            <span onclick="saveQuote()" class="quoteFocus removeDP slide-right" id="quoteFocus">Add Quote.</span>
+            <i class="fas fa-chevron-circle-right"></i>
+        </div>
+        <!-- For To Do Page Container -->
+        <div class="toDoHome">
+            <p class="toDo removeDP" id="toDo">To Do</p>
+        </div>
+    </main>
+
+    <main class="toDo" id="toDo">
+
+    </main>
+    
+    <!-- Scripts -->
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/time.js"></script>
+    <script src="scripts/todo.js"></script>
+    <script src="scripts/ani.js"></script>
+    <script src="scripts/quotes.js"></script>
+    <script src="scripts/functions.js"></script>
+
+    <!-- End of Scripts -->
+</body>
+</html>

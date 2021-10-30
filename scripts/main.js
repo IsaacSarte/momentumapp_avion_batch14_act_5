@@ -1,0 +1,4 @@
+let start = () => {
+    initClock();
+    getName();
+}

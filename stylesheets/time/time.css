@@ -1,0 +1,69 @@
+.datetime {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 10vh;
+  color: #fff;
+  -webkit-animation: fades 1s linear forwards;
+          animation: fades 1s linear forwards;
+}
+
+@-webkit-keyframes fades {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fades {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.date {
+  font-size: 4vw;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 5vw;
+}
+
+.time span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time span:last-child {
+  font-size: 3.75vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Phone Queries */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .date {
+    margin-top: -10vh;
+    font-size: 7.5vw;
+  }
+  .time {
+    font-size: 7vw;
+  }
+}
+/*# sourceMappingURL=time.css.map */
