@@ -38,7 +38,7 @@ newCategoryForm.addEventListener('submit', (e) => {
     const isCategoryEmpty = !category || !category.trim().length;
 
     if (isCategoryEmpty) {
-        return console.log('please enter a task');
+        return alert('Please Input Category 🤙')
     }
 
     categories.push({ _id: Date.now().toString(), category: category, color: getRandomHexColor() });
@@ -141,18 +141,18 @@ editTodoForm.addEventListener('submit', function (e) {
 
 // *==================== Functions ====================
 
-function saveAndRender() {
+let saveAndRender = () => {
     save();
     render();
 }
 
-function save() {
+let save = () => {
     localStorage.setItem(LOCAL_STORAGE_CATEGORIES_KEY, JSON.stringify(categories));
     localStorage.setItem(LOCAL_STORAGE_TODOS_KEY, JSON.stringify(todos));
     localStorage.setItem(LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY, selectedCategoryId);
 }
 
-function render() {
+let render = () => {
     clearChildElements(categoriesContainer);
     clearChildElements(newTodoSelect);
     clearChildElements(editTodoSelect);
@@ -171,7 +171,7 @@ function render() {
     }
 }
 
-function renderCategories() {
+let renderCategories = () => {
     categoriesContainer.innerHTML += `<li class="sidebar-item ${selectedCategoryId === 'null' || selectedCategoryId === null ? 'active' : ''}" data-category-id="">See All ▼</li>
 	`;
 
@@ -180,7 +180,7 @@ function renderCategories() {
     });
 }
 
-function renderFormOptions() {
+let renderFormOptions = () => {
 
     newTodoSelect.innerHTML += `<option value="">Select A Category</option>`;
     editTodoSelect.innerHTML += `<option value="">Select A Category</option>`;
@@ -191,7 +191,7 @@ function renderFormOptions() {
     });
 }
 
-function renderTodos() {
+let renderTodos = () =>  {
     let todosToRender = todos;
 
     // if their is a Selected Category Id, and selected category id !== 'null then filter the todos
@@ -220,13 +220,13 @@ function renderTodos() {
 }
 
 // HELPERS
-function clearChildElements(element) {
+let clearChildElements = (element) => {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
 }
 
-function convertHexToRGBA(hexCode, opacity) {
+let convertHexToRGBA = (hexCode, opacity) => {
     let hex = hexCode.replace('#', '');
 
     if (hex.length === 3) {
@@ -240,7 +240,7 @@ function convertHexToRGBA(hexCode, opacity) {
     return `rgba(${r},${g},${b},${opacity / 100})`;
 }
 
-function getRandomHexColor() {
+let getRandomHexColor = () => {
     var hex = (Math.round(Math.random() * 0xffffff)).toString(16);
     while (hex.length < 6) hex = "0" + hex;
     return `#${hex}`;

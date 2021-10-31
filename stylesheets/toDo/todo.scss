@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: url('https://images.unsplash.com/photo-1488767136043-c1eb91ca932d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80')
+    background: url('https://images.unsplash.com/photo-1631477076110-2b8c1fe0f3cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80')
         no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
@@ -23,7 +23,6 @@ body {
 .toDoConts {
     display: grid;
     grid-template-columns: 240px 1fr;
-    border-radius: 16px;
     overflow: hidden;
     height: 100%;
 }
@@ -60,9 +59,8 @@ button {
 // Sidebar Styles
 
 .sidebar {
-    height:100%;
-    background: linear-gradient(0deg, #090909, #1D1C18 80%) no-repeat;
-    box-shadow: -10px 5px 10px 8px #aaaaaa;
+    height: 100%;
+    background: linear-gradient(0deg, #0D0F11, #2C3133 80%) no-repeat;
     color: $whiteFont;
 }
 
@@ -132,9 +130,8 @@ button {
 }
 
 .mHeader {
-    background: linear-gradient(95deg,  #1D1C18, #171715 80%) no-repeat;
+    background: linear-gradient(95deg,  #1E2223, #171715 80%) no-repeat;
     transform: translateX(10px);
-    box-shadow: 5px 5px 5px -2px #aaa;
 }
 
 .currently-viewing {
@@ -329,4 +326,24 @@ select {
 .fa-trash-alt:hover {
     color: rgb(88, 0, 0);
     transform: translateY(-10px);
+}
+
+.toHomeConts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: sticky;
+    top: 100%;
+    transform: translateY(1vh);
+    .heading {
+        font-weight: 500;
+        font-size: 1.5vw;
+        color: $whiteFont;
+        transform: translateX(-8.5vw);
+        cursor: pointer;
+    }
+    .heading:hover {
+        color: #bfbfbf;
+        text-decoration: underline;
+    }
 }

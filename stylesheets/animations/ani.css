@@ -59,4 +59,101 @@
             transform: translateX(0vh);
   }
 }
+
+.slides_right {
+  -webkit-animation: slide_right 1s linear forwards;
+          animation: slide_right 1s linear forwards;
+}
+
+@-webkit-keyframes slide_right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-8.5vw);
+            transform: translateX(-8.5vw);
+  }
+}
+
+@keyframes slide_right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-8.5vw);
+            transform: translateX(-8.5vw);
+  }
+}
+
+.from_right {
+  -webkit-animation: from_right 1s linear forwards;
+          animation: from_right 1s linear forwards;
+}
+
+@-webkit-keyframes from_right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10vw);
+            transform: translateX(10vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+}
+
+@keyframes from_right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10vw);
+            transform: translateX(10vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+}
+
+.from_bot {
+  -webkit-animation: from_bot 1s linear forwards;
+          animation: from_bot 1s linear forwards;
+}
+
+@-webkit-keyframes from_bot {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+            transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    -webkit-transform: translateX(1vw);
+            transform: translateX(1vw);
+  }
+}
+
+@keyframes from_bot {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+            transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    -webkit-transform: translateX(1vw);
+            transform: translateX(1vw);
+  }
+}
 /*# sourceMappingURL=ani.css.map */

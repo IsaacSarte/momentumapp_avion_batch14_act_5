@@ -29,3 +29,49 @@
             transform: translateX(0vh);
         }
     }
+
+.slides_right {
+    animation: slide_right 1s linear forwards;
+}
+
+    @keyframes slide_right {
+        0% {
+            opacity: 0;
+            transform: translateX(0vw);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-8.5vw);
+        }
+    }
+
+.from_right {
+    animation: from_right 1s linear forwards;
+}
+
+    @keyframes from_right {
+        0% {
+            opacity: 0;
+            transform: translateX(10vw);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0vw);
+        }
+    }
+
+.from_bot {
+    animation: from_bot 1s linear forwards;
+}
+
+    @keyframes from_bot {
+        0% {
+            opacity: 0;
+            transform: translateY(10vh);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0vh);
+            transform: translateX(1vw);
+        }
+    }
