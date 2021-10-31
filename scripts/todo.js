@@ -164,15 +164,15 @@ function render() {
 
     // Set the current viewing category
     if (!selectedCategoryId || selectedCategoryId === 'null') {
-        currentlyViewing.innerHTML = `You are currently viewing <strong>All Categories</strong>`;
+        currentlyViewing.innerHTML = `<strong>All Categories</strong>`;
     } else {
         const currentCategory = categories.find((category) => category._id === selectedCategoryId);
-        currentlyViewing.innerHTML = `You are currently viewing <strong>${currentCategory.category}</strong> <span>(delete)</span>`;
+        currentlyViewing.innerHTML = `<strong>${currentCategory.category}</strong> <span>(delete)</span>`;
     }
 }
 
 function renderCategories() {
-    categoriesContainer.innerHTML += `<li class="sidebar-item ${selectedCategoryId === 'null' || selectedCategoryId === null ? 'active' : ''}" data-category-id="">View All</li>
+    categoriesContainer.innerHTML += `<li class="sidebar-item ${selectedCategoryId === 'null' || selectedCategoryId === null ? 'active' : ''}" data-category-id="">See All ▼</li>
 	`;
 
     categories.forEach(({ _id, category, color }) => {

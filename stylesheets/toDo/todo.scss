@@ -28,19 +28,6 @@ body {
     height: 100%;
 }
 
-// Header Styles
-
-.header {
-    font-weight: 500;
-    padding: 1.6rem;
-    position: sticky;
-    top: 0;
-}
-
-.header-title {
-    margin: 10px 0;
-}
-
 // Input Styles
 
 input {
@@ -53,10 +40,30 @@ input {
     border-bottom: 1px solid $whiteFont;
     transition: 0.5s ease-in-out;
 }
+
 input:focus {
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(143, 142, 170, 0.924);
+}
+
+// Button Styles
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: $whiteFont;
+}
+
+// Sidebar Styles
+
+.sidebar {
+    height:100%;
+    background: linear-gradient(0deg, #090909, #1D1C18 80%) no-repeat;
+    box-shadow: -10px 5px 10px 8px #aaaaaa;
+    color: $whiteFont;
 }
 
 .sbHeader {
@@ -64,17 +71,16 @@ input:focus {
     color: $whiteFont;
 }
 
-.currently-viewing {
-    font-size: 1.5rem;
+.catBtn {
+    font-weight: 300;
+    font-size: 1vw;
+    margin-left: -1.75vw;
 }
 
-.currently-viewing > span {
-    font-weight: bold;
-    color: #e57373;
-    cursor: pointer;
+.catBtn:hover {
+    color: #d6d6d6;
 }
 
-/* Sidebar Form */
 .sidebar-form .form-control {
     margin: 10px 0;
 }
@@ -83,8 +89,8 @@ input:focus {
     width: 100%;
 }
 
-/* Sidebar List */
 .sidebar-list {
+    margin-top: 3vh;
     padding: 1.6rem;
 }
 
@@ -92,13 +98,13 @@ input:focus {
     display: inline-flex;
     align-items: center;
     width: 100%;
-    margin: 16px 0;
+    margin-top: 1vh;
     cursor: pointer;
     font-size: 1.75rem;
 }
 
 .sidebar-item.active {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .sidebar-item:first-child {
@@ -112,9 +118,57 @@ input:focus {
     cursor: pointer;
 }
 
+// Header Styles
+
+.header {
+    padding: 1.6rem;
+    position: sticky;
+    top: 0;
+}
+
+.header-title {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.mHeader {
+    background: linear-gradient(95deg,  #1D1C18, #171715 80%) no-repeat;
+    transform: translateX(10px);
+    box-shadow: 5px 5px 5px -2px #aaa;
+}
+
+.currently-viewing {
+    font-size: 2rem;
+    color: $whiteFont;
+    font-weight: 400;
+    margin-right: -20vw;
+}
+
+.currently-viewing::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 400;
+    content: '\f06e               ';
+    color: rgb(6, 196, 6);
+}
+
+.currently-viewing > span {
+    font-weight: 700;
+    color: #e01c1c;
+    cursor: pointer;
+}
+
+option {
+    color: #000;
+}
+
+select {
+    cursor: pointer;
+    color: $whiteFont;
+}
+
 /* Main */
+
 .main {
-    background: #1F2024;
     overflow-y: scroll;
 }
 
@@ -129,6 +183,7 @@ input:focus {
 }
 
 /* Create and Edit Form */
+
 .create-todo-form input, .edit-todo-form input,
 .create-todo-form select, .edit-todo-form select {
     border: 0;
@@ -136,6 +191,25 @@ input:focus {
     padding: 3px 0;
     font-size: 16px;
     background-color: transparent;
+}
+
+.create-todo-form .addBtn {
+    outline: auto;
+    outline-style: round;
+    border: none;
+    border-radius: 15px;
+    margin-right: 50%;
+    font-size: 0.75vw;
+    font-weight: 400;
+    background: $whiteFont;
+    padding: 1rem 1rem;
+    color: #000;
+    transition: 0.1s linear ease-in;
+}
+
+.create-todo-form .addBtn:hover {
+    transform: scale(1.05);
+    color: #6d6c6c;
 }
 
 .create-todo-form input:focus, .edit-todo-form input:focus,
@@ -147,12 +221,54 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex: .8;
+    flex: 0.8;
 }
 
-.create-todo-form input, .edit-todo-form input {
-    border-bottom: 1px solid #b4b3cb;
-    width: 350px;
+.create-todo-form input {
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 140%;
+    color: $whiteFont;
+    border-bottom: 1px solid $whiteFont;
+    transition: 0.5s ease-in-out;
+}
+
+.edit-todo-form input {
+    margin-top: 1vh;
+    outline: none;
+    border: none;
+    width: 150%;
+    transform: translateX(-18vw);
+    background: transparent;
+    color: $whiteFont;
+    border-bottom: 1px solid $whiteFont;
+    transition: 0.5s ease-in-out;
+}
+
+.editBtn {
+    transform: translateX(-33vw);
+    outline: auto;
+    outline-style: round;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.75vw;
+    font-weight: 500;
+    background: $whiteFont;
+    padding: 1rem 2rem;
+    color: #000;
+    transition: 0.1s linear ease-in;
+}
+
+.editBtn:hover {
+    font-size: 0.80vw;
+    color: #6d6c6c;
+}
+
+.create-todo-form input:focus, .edit-todo-form input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(143, 142, 170, 0.924);
 }
 
 .edit-todo-form {
@@ -160,6 +276,7 @@ input:focus {
 }
 
 /* Cards */
+
 .todos-container {
     display: grid;
     grid-template-columns: repeat(4,1fr); 
@@ -170,7 +287,6 @@ input:focus {
 
 .todo {
     background-color: #fff;
-    color: var(--primary-color);
     border-top: 6px solid;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -200,6 +316,17 @@ input:focus {
 .todo-actions i {
     font-size: 1.6rem;
     margin-right: 1.6rem;
-    opacity: 0.25;
+    opacity: 1;
     cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.fa-edit:hover {
+    color: rgb(112, 55, 1);
+    transform: translateY(-10px);
+}
+
+.fa-trash-alt:hover {
+    color: rgb(88, 0, 0);
+    transform: translateY(-10px);
 }
